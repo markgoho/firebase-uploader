@@ -11,7 +11,7 @@ export class DropFilesDirective {
   @Output() public fileOver:EventEmitter<any> = new EventEmitter();
   @Output() public onFileDrop:EventEmitter<FileItem[]> = new EventEmitter<FileItem[]>();
 
- private element:ElementRef;
+  private element:ElementRef;
 
   public constructor(element:ElementRef) {
     this.element = element;
@@ -28,7 +28,7 @@ export class DropFilesDirective {
     this.onFileDrop.emit(this.files);
   }  
 
-  @HostListener('draenter', ['$event'])
+  @HostListener('dragenter', ['$event'])
   public onDragEnter(event:any):void {
     this._preventAndStop(event);
     this.fileOver.emit(true);
