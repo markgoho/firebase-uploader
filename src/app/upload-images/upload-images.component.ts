@@ -13,8 +13,7 @@ export class UploadImagesComponent {
   isEnabledUpload: boolean = true;
   files: Array<FileItem> = [];
 
-  constructor(public uploadImagesService: UploadImagesService) {
-  }
+  constructor(public uploadImagesService: UploadImagesService) { }
 
   public fileOverDropZone(e:any):void {
     this.isDropZoneOver = e;

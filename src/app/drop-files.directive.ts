@@ -7,7 +7,7 @@ import * as _ from 'lodash';
 })
 export class DropFilesDirective {
 
-  @Input() public files:Array<FileItem> = [];
+  @Input() public files: FileItem[] = [];
   @Output() public fileOver:EventEmitter<any> = new EventEmitter();
   @Output() public onFileDrop:EventEmitter<FileItem[]> = new EventEmitter<FileItem[]>();
 
